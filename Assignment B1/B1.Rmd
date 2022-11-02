@@ -108,3 +108,14 @@ test_that("This is a test for my summary function", {
   )
 ```
 
+## I can confirm that my function:
+
+1. Does not rely on anything from a working environment
+
+2. Does not rely on magic numbers
+
+3. Does not take an input of rigid form
+
+4. Has a consistent output of a tibble
+
+5. Includes appropriate arguments (ex. how it handling NA's)
