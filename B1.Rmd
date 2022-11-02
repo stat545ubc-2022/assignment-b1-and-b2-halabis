@@ -1,0 +1,103 @@
+---
+title: "Assignment B1"
+author: "Sabine Halabi"
+date: "2022-10-31"
+output: html_document
+---
+# Function Building
+This project requires us to build a function of our choosing.
+
+```{r}
+library(tidyverse)
+library(styler)
+library(lintr)
+library(roxygen2)
+library(datateachr)
+library(testthat)
+```
+
+## My Function and Documentation
+To produce summary statistics for many variables in my dataset from my STAT 545A data analysis project, I had to copy-paste the same code and change the variables each time, as well as changing the dataset when I wanted to explore each dataset. I want to make it easier to run summary statistics for different datasets by creating a function that does so. Additionally, I consistently had to use the function group_by() and change the variable. This became tedious everytime I want to run group_by() %>% summarise(). 
+
+
+```{r}
+#' Function for Summary Statistics
+#' 
+#' @description Function that runs summary statistics by groups on specified variables in dataset
+#' 
+#' @param data dataset which includes all required variables for the function
+#' @param col column name by which other variables will be grouped by
+#' @param var variable for which we want to obtain summary statistics
+#' @param na.rm set default as FALSE and can be specified with TRUE as needed
+#' 
+#' @return the function will return a tibble including the count of the variable per group of the col param, as well as columns for each summary statistics in the function per group.
+#' 
+
+summary_function <- function(data, col, var, na.rm = FALSE) {
+  if(!is.numeric(data %>% pull({{var}}))){
+    stop("Sorry! Variable must be numeric!")
+  }
+  data %>%
+    group_by({{col}}) %>%
+    summarise(n=n(), mean = mean({{var}}, na.rm = na.rm), median = median({{var}}, na.rm = na.rm), min = min({{var}}, na.rm = na.rm), max = max({{var}}, na.rm = na.rm), sd= sd({{var}}, na.rm = na.rm))
+}
+  
+```
+
+## Examples
+
+My first example will be some datasets from datateachr:
+
+```{r}
+#summary stats for radius_mean variable in cancer dataset 
+#this is an example of where a function would work
+
+cancer_sample %>% 
+  summary_function(diagnosis, radius_mean)
+
+```
+```{r}
+#summary stat for flow_sample dataset
+#this is an example of where the function requires na.rm = TRUE argument
+
+flow_sample %>% 
+  summary_function(extreme_type, flow, na.rm = TRUE)
+```
+```{r}
+#summary stat for vancouver_trees dataset
+# this is an example of where the function will not work because of a non-numeric argument in the var parameter
+
+vancouver_trees %>% 
+  summary_function(tree_id, genus_name)
+```
+
+```{r}
+#test from gapminder dataset
+#this is an example of where the function will work
+
+gapminder %>% summary_function(continent, lifeExp)
+```
+```{r}
+#test from gapminder dataset
+#this is an example of where the function won't work because the var parameter is not numeric
+
+gapminder %>% summary_function(continent, country)
+```
+
+
+## Function Test
+
+```{r}
+#there should be an error message when variable name isn't numeric
+test_that("This is a test for my summary function", {
+  expect_error(summary_function(vancouver_trees, tree_id, genus_name)) #Test whether an error message is given if variable is non-numeric
+  expect_error(summary_function(building_permits, type_of_work, property_use)) #Another error test 
+  expect_identical((summary_function(cancer_sample, diagnosis, radius_mean)),
+                   (cancer_sample %>% 
+                      group_by(diagnosis) %>% 
+                      summarise(n=n(), mean = mean(radius_mean), median = median(radius_mean), min = min(radius_mean), max = max(radius_mean), sd = sd(radius_mean)))) #Test whether the function gives identical result as manual input
+  expect_true(is_tibble(summary_function(cancer_sample, diagnosis, radius_mean))) #Test that the output is a tibble table
+  }
+  )
+```
+
