@@ -57,6 +57,8 @@ cancer_sample %>%
   summary_function(diagnosis, radius_mean)
 
 ```
+
+
 ```{r}
 #summary stat for flow_sample dataset
 #this is an example of where the function requires na.rm = TRUE argument
@@ -64,6 +66,8 @@ cancer_sample %>%
 flow_sample %>% 
   summary_function(extreme_type, flow, na.rm = TRUE)
 ```
+
+
 ```{r}
 #summary stat for vancouver_trees dataset
 # this is an example of where the function will not work because of a non-numeric argument in the var parameter
@@ -78,6 +82,8 @@ vancouver_trees %>%
 
 gapminder %>% summary_function(continent, lifeExp)
 ```
+
+
 ```{r}
 #test from gapminder dataset
 #this is an example of where the function won't work because the var parameter is not numeric
