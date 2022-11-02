@@ -14,6 +14,7 @@ library(lintr)
 library(roxygen2)
 library(datateachr)
 library(testthat)
+library(gapminder)
 ```
 
 ## My Function and Documentation
