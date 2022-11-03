@@ -86,7 +86,7 @@ flow_sample %>%
 ```
 
 
-```{r}
+```{r, error = TRUE}
 #summary stat for vancouver_trees dataset
 # this is an example of where the function will not work because of a non-numeric argument in the variable parameter
 
@@ -103,7 +103,7 @@ gapminder %>% summary_function(continent, lifeExp)
 ```
 
 
-```{r}
+```{r, error = TRUE}
 #test from gapminder dataset
 #this is an example of where the function won't work because the variable parameter is not numeric
 
