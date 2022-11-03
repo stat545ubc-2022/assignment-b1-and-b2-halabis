@@ -11,6 +11,35 @@ I conducted some examples using two data packages: **gapminder** and **datateach
 
 In the folder labelled **Assignment B1**, there is an Rmd file containing the codes I used in the assignment, as well as an Md file with the knitted version of the code. There will also be a README file in each folder of the repository.
 
+### Repository Access
+
+Follow the blow steps to access the repository on your local machine (assuming Mac):
+
+```{r}
+$ git init
+```
+
+```{r}
+$ git clone https://github.com/stat545ubc-2022/assignment-b1-and-b2-halabis.git
+```
+
+
+### Usage
+
+To replicate the Rmd file, you must first attach the following packages:
+
+```{r}
+library(tidyverse)
+library(styler)
+library(lintr)
+library(roxygen2)
+library(datateachr)
+library(testthat)
+library(gapminder)
+```
+
+Once installed, all functions of the package should work. Remember, if the libraries do not attach, you must install them first. Note that the data used for examples and testing were retrieved from the libraries **datateachr** and **gapminder**!
+
 ## Assignment B2
 
 ### Description
