@@ -1,0 +1,12 @@
+Package: groupsummary
+Title: Summary function that bundles group_by function and summarize function to compute summary statistics
+Version: 0.1.0
+Authors@R: 
+    person("Sabine", "Halabi", , "halabis2@student.ubc.ca", role = c("aut", "cre"),
+           comment = c(ORCID = "N/A"))
+Description: Function that takes inputs of your dataset of interest, column by which you want to group data, and variable for which you want to run summary statistics #' and produces summary statistics. I have also added a custom error message if the inputted variable is not numeric. 
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
