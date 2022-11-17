@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# groupsummary
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The **summaries** package is an R package that contains a summary function in the **R folder** that allows one to easily supply the function with a dataframe, a column by which the data should be grouped by, and a variable for which summary statistics (count, mean, median, minimum, maximum, and standard deviation) should be produced.
+
+Follow below for installation and usage instructions.
+
+## Installation
+
+You can install the development version of summaries like so:
+
+```{r}
+library(devtools)
+
+devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-halabis/groupsummary", ref = "0.1.0")
+```
+
+
+## Usage Examples
+
+Below is a basic example which shows you how to conduct a common computation:
+
+```{r cars}
+library(gapminder)
+library(groupsummary)
+
+summary_function(gapminder, continent, lifeExp)
+
+```
