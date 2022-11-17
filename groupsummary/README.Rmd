@@ -36,9 +36,8 @@ devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-halabis/groupsumm
 Below is a basic example which shows you how to conduct a common computation:
 
 ```{r cars}
-library(gapminder)
 library(groupsummary)
 
-summary_function(gapminder, continent, lifeExp)
+summary_function(datateachr::cancer_sample, diagnosis, radius_mean)
 
 ```

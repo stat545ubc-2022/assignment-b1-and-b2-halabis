@@ -11,7 +11,6 @@
 #' @examples
 #' summary_function(cancer_sample, diagnosis, radius_mean)
 #' summary_function(flow_sample, extreme_type, flow, na.rm = TRUE)
-#' summary_function(gapminder, continent, lifeExp)
 #'
 #' @export
 

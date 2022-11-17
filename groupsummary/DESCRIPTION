@@ -13,7 +13,6 @@ RoxygenNote: 7.2.1
 Imports: 
     magrittr, 
     dplyr, 
-    datateachr, 
-    gapminder (>= 1.0.6)
+    datateachr
 Suggests: testthat, digest
 
