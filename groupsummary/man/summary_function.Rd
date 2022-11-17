@@ -23,6 +23,6 @@ Function that takes inputs of your dataset of interest, column by which you want
 }
 \examples{
 summary_function(cancer_sample, diagnosis, radius_mean) #expect summary tibble for radius_mean per diagnosis group
-summary_function(flow_sample, extreme_type, flow, na.rm = TRUE) #expect summary tibble of flow per extreme_type group
+summary_function(gapminder, continent, lifeExp) #expect summary tibble of lifeExp per continent group
 
 }
