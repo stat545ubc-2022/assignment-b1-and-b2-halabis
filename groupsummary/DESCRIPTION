@@ -15,4 +15,10 @@ Imports:
     datateachr,
     devtools,
     gapminder
-Suggests: testthat, digest, stats
+Suggests: 
+    testthat (>= 3.0.0),
+    digest,
+    stats,
+    tibble,
+    tinytest
+Config/testthat/edition: 3
