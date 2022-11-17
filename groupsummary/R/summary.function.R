@@ -1,13 +1,13 @@
 #' Summary function that bundles group_by function and summarize function to compute summary statistics
 #'
-#' @description Function that takes inputs of your dataset of interest, column by which you want to group data, and variable for which you want to run summary statistics #' and produces summary statistics. I have also added a custom error message if the inputted variable is not numeric.
+#' @description Function that takes inputs of your dataset of interest, column by which you want to group data, and variable for which you want to run summary statistics and produces summary statistics. I have also added a custom error message if the inputted variable is not numeric.
 #'
 #' @param data dataset which includes all required variables for the function
 #' @param col column name by which other variables will be grouped by
 #' @param var variable for which we want to obtain summary statistics
 #' @param na.rm set default as FALSE and can be specified with TRUE as needed
 #'
-#' @return the function will return a tibble including the count of the variable per group of the col param, as well as columns for each summary statistics in the       #' function per group.
+#' @return the function will return a tibble including the count of the variable per group of the col param, as well as columns for each summary statistics in the function per group.
 #' @examples
 #' summary_function(cancer_sample, diagnosis, radius_mean) #expect summary tibble for radius_mean per diagnosis group
 #' summary_function(gapminder, continent, lifeExp) #expect summary tibble of lifeExp per continent group
