@@ -9,8 +9,8 @@
 #'
 #' @return the function will return a tibble including the count of the variable per group of the col param, as well as columns for each summary statistics in the       #' function per group.
 #' @examples
-#' summary_function(datateachr::cancer_sample, diagnosis, radius_mean)
-#' summary_function(datateachr::flow_sample, extreme_type, flow, na.rm = TRUE)
+#' summary_function(cancer_sample, diagnosis, radius_mean) #expect summary tibble for radius_mean per diagnosis group
+#' summary_function(flow_sample, extreme_type, flow, na.rm = TRUE) #expect summary tibble of flow per extreme_type group
 #'
 #' @export
 
