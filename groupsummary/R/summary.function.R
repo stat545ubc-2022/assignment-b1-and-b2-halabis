@@ -19,6 +19,6 @@ summary_function <- function(data, col, var, na.rm = FALSE) {
     stop("Sorry! Variable must be numeric!")
   }
   data %>%
-    group_by({{col}}) %>%
-    summarise(n=n(), mean = mean({{var}}, na.rm = na.rm), median = median({{var}}, na.rm = na.rm), min = min({{var}}, na.rm = na.rm), max = max({{var}}, na.rm = na.rm), sd= sd({{var}}, na.rm = na.rm))
+    dplyr::group_by({{col}}) %>%
+    dplyr::summarise(n=n(), mean = mean({{var}}, na.rm = na.rm), median = median({{var}}, na.rm = na.rm), min = min({{var}}, na.rm = na.rm), max = max({{var}}, na.rm = na.rm), sd= sd({{var}}, na.rm = na.rm))
 }
