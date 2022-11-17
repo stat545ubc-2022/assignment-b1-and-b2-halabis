@@ -27,7 +27,7 @@ You can install the development version of summaries like so:
 ```{r}
 library(devtools)
 
-devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-halabis/groupsummary", ref = "0.1.0")
+devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-halabis/groupsummary")
 ```
 
 
