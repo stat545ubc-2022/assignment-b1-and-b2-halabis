@@ -25,13 +25,13 @@ library(devtools)
 devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-halabis/groupsummary")
 #> Downloading GitHub repo stat545ubc-2022/assignment-b1-and-b2-halabis@HEAD
 #> 
-#> * checking for file ‘/private/var/folders/v1/hm0zf5vd6mzdf0kztxmrw1fh0000gn/T/RtmpXXUJaW/remotes11f906e5dce73/stat545ubc-2022-assignment-b1-and-b2-halabis-6037a1b/groupsummary/DESCRIPTION’ ... OK
+#> * checking for file ‘/private/var/folders/v1/hm0zf5vd6mzdf0kztxmrw1fh0000gn/T/RtmpIQwAGU/remotes1515d7454b816/stat545ubc-2022-assignment-b1-and-b2-halabis-83288ee/groupsummary/DESCRIPTION’ ... OK
 #> * preparing ‘groupsummary’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
 #> * checking for empty or unneeded directories
 #> * building ‘groupsummary_0.1.0.tar.gz’
-#> Installing package into '/private/var/folders/v1/hm0zf5vd6mzdf0kztxmrw1fh0000gn/T/RtmpAGDoqC/temp_libpath119ae52e3b17b'
+#> Installing package into '/private/var/folders/v1/hm0zf5vd6mzdf0kztxmrw1fh0000gn/T/RtmpmwfQKS/temp_libpath1314b8ba32b1'
 #> (as 'lib' is unspecified)
 ```
 
