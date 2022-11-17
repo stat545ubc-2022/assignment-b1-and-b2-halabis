@@ -22,7 +22,7 @@ the function will return a tibble including the count of the variable per group 
 Function that takes inputs of your dataset of interest, column by which you want to group data, and variable for which you want to run summary statistics #' and produces summary statistics. I have also added a custom error message if the inputted variable is not numeric.
 }
 \examples{
-summary_function(cancer_sample, diagnosis, radius_mean)
-summary_function(flow_sample, extreme_type, flow, na.rm = TRUE)
+summary_function(datateachr::cancer_sample, diagnosis, radius_mean)
+summary_function(datateachr::flow_sample, extreme_type, flow, na.rm = TRUE)
 
 }
