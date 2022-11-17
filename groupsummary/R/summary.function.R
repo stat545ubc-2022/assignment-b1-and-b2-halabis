@@ -15,7 +15,7 @@
 #' @export
 
 summary_function <- function(data, col, var, na.rm = FALSE) {
-  if(!is.numeric(data %>% pull({{var}}))){
+  if(!is.numeric(data %>% dplyr::pull({{var}}))){
     stop("Sorry! Variable must be numeric!")
   }
   data %>%
