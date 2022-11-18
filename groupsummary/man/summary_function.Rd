@@ -16,13 +16,14 @@ summary_function(data, col, var, na.rm = FALSE)
 \item{na.rm}{set default as FALSE and can be specified with TRUE as needed}
 }
 \value{
-the function will return a tibble including the count of the variable per group of the col param, as well as columns for each summary statistics in the function per group.
+The function will return a tibble including the count of the variable per group of the col param, as well as columns for each summary statistics in the function per group.
 }
 \description{
-Function that takes inputs of your dataset of interest, column by which you want to group data, and variable for which you want to run summary statistics and produces summary statistics. I have also added a custom error message if the inputted variable is not numeric.
+This is a function that takes inputs of your dataset of interest, a column in the dataset by which you want to group data, and a variable in the dataset for which you want to run summary statistics. I have also added a custom error message if the inputted variable is not numeric.
 }
 \examples{
 summary_function(cancer_sample, diagnosis, radius_mean) #expect summary tibble for radius_mean per diagnosis group
+
 summary_function(gapminder, continent, lifeExp) #expect summary tibble of lifeExp per continent group
 
 }

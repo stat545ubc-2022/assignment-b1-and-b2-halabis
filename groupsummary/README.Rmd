@@ -13,12 +13,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-# groupsummary
+# groupsummary package
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The **summaries** package is an R package that contains a summary function in the **R folder** that allows one to easily supply the function with a dataframe, a column by which the data should be grouped by, and a variable for which summary statistics (count, mean, median, minimum, maximum, and standard deviation) should be produced.
+The **groupsummary** package is an R package that contains the summary_function() in the **R folder** that allows one to easily supply the function with a dataset, a column in the dataset by which the data should be grouped by, and a variable from the same dataset for which summary statistics (count, mean, median, minimum, maximum, and standard deviation) should be produced.
 
 Follow below for installation and usage instructions.
 
@@ -43,3 +43,11 @@ library(groupsummary)
 summary_function(datateachr::cancer_sample, diagnosis, radius_mean)
 
 ```
+
+## Tests Folder
+
+The **tests** folder includes several tests executed for the function including tests that confirm output is a tibble of summary statistics, tests that throw errors where expected, and errors that demonstrate that the function outputs an identical output compared to the longer, manual version of the function made of several functions.
+
+## Data Folder
+
+The **data** folder contains all data sets used in documentation, examples, and tests. They are not fundamental requirements for the use of the function.

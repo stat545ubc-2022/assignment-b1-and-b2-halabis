@@ -15,7 +15,8 @@ Imports:
 Config/testthat/edition: 3
 Suggests: 
     testthat (>= 3.0.0),
-    tibble
+    tibble,
+    tidyr
 Depends: 
     R (>= 2.10)
 LazyData: true
