@@ -44,4 +44,4 @@ Once installed, all functions of the package should work. Remember, if the libra
 
 ### Description
 
-In **Assignment B2** we will be creating a package that contains the function and documentation produced in **Assignment B1**. 
+In **Assignment B2** we will be creating a package that contains the function and documentation produced in **Assignment B1**. Please find the package in the folder **groupsummary**.
